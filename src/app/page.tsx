@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Card } from "@/components/ui/card";
-import { Analytics } from "@vercel/Analytics/react";
+import { Analytics } from "@vercel/analytics/react"
 import { Github, Linkedin, Twitter } from "lucide-react";
 import { useEffect, useState } from "react";
 
