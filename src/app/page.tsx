@@ -2,8 +2,11 @@
 
 import Link from "next/link";
 import { Card } from "@/components/ui/card";
+import { Analytics } from "@vercel/analytics/react";
 import { Github, Linkedin, Twitter } from "lucide-react";
 import { useEffect, useState } from "react";
+
+<Analytics />;
 
 interface GitHubEvent {
   type: string;
@@ -23,6 +26,7 @@ async function fetchGitHubContributions(username: string) {
     return 0;
   }
 }
+
 
 export default function Home() {
   const [contributions, setContributions] = useState(0);
