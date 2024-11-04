@@ -31,7 +31,7 @@ export default function Projects() {
       </div>
 
       <div className="grid gap-6">
-        {projects.map((project, index) => (
+        {projects.map((project) => (
           <div key={project.name}>
             <Card className="p-6 hover:bg-blue-500/5 transition-colors">
               <div className="flex items-start justify-between">

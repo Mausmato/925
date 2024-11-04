@@ -1,10 +1,14 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { Card } from "@/components/ui/card";
-import { Waves, Github, Linkedin, Twitter, Instagram } from "lucide-react";
+import { Github, Linkedin, Twitter } from "lucide-react";
 import { useEffect, useState } from "react";
+
+interface GitHubEvent {
+  type: string;
+  // Add other properties if needed
+}
 
 async function fetchGitHubContributions(username: string) {
   try {
@@ -12,7 +16,7 @@ async function fetchGitHubContributions(username: string) {
       `https://api.github.com/users/${username}/events`
     );
     const data = await response.json();
-    const pushEvents = data.filter((event: any) => event.type === "PushEvent");
+    const pushEvents = data.filter((event: GitHubEvent) => event.type === "PushEvent");
     return pushEvents.length;
   } catch (error) {
     console.error("Error fetching GitHub data:", error);

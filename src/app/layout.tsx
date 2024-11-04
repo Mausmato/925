@@ -3,7 +3,7 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { useRouter, usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,12 +14,10 @@ export default function RootLayout({
 }) {
   const router = useRouter();
   const pathname = usePathname();
-  const [pressedKey, setPressedKey] = useState<string | null>(null);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       const key = e.key.toLowerCase();
-      setPressedKey(key);
       switch (key) {
         case "m":
           router.push("/");
@@ -33,15 +31,9 @@ export default function RootLayout({
       }
     };
 
-    const handleKeyUp = () => {
-      setPressedKey(null);
-    };
-
     window.addEventListener("keydown", handleKeyDown);
-    window.addEventListener("keyup", handleKeyUp);
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
-      window.removeEventListener("keyup", handleKeyUp);
     };
   }, [router]);
 
