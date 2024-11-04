@@ -54,7 +54,7 @@ export default function RootLayout({
             <button
               key={key}
               onClick={() => router.push(href)}
-              className={`group relative flex h-12 w-12 items-center justify-center rounded-md border-2 border-primary bg-background font-mono text-xl font-bold shadow-lg transition-all ${
+              className={`group relative flex h-12 w-12 items-center justify-center rounded-md border-2 border-primary bg-background font-mono text-xl text-blue-600 font-bold shadow-lg transition-all ${
                 pathname === href ? "bg-primary text-primary-foreground" : ""
               }`}
             >
