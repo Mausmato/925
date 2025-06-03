@@ -26,7 +26,7 @@ export default function Projects() {
   return (
     <div className="space-y-8">
       <div className="space-y-2">
-        <h1 className="text-4xl font-bold text-blue-400">projects</h1>
+        <h1 className="text-4xl font-bold text-blue-400">Projects</h1>
         <div className="h-1 w-20 bg-blue-500/50 rounded-full" />
       </div>
 
