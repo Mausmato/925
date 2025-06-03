@@ -7,27 +7,18 @@ import Link from "next/link";
 export default function Blog() {
   const posts = [
     {
-      title: "Placeholder Title 1",
-      excerpt:
-        "This is a placeholder excerpt for the first blog post...",
+      title: "Introducing the Blog",
+      excerpt: "Short updates and articles will appear here soon.",
       date: "2024-01-01",
-      readTime: "5 min read",
-      tags: ["Placeholder", "Example"],
-    },
-    { 
-      title: "Placeholder Title 2",
-      excerpt:
-        "This is a placeholder excerpt for the second blog post...",
-      date: "2024-01-02",
-      readTime: "7 min read",
-      tags: ["Placeholder", "Example"],
+      readTime: "2 min read",
+      tags: ["Announcement"],
     },
   ];
 
   return (
     <div className="space-y-8">
       <div className="space-y-2">
-        <h1 className="text-4xl font-bold text-blue-400">blog</h1>
+        <h1 className="text-4xl font-bold text-blue-400">Blog</h1>
         <div className="h-1 w-20 bg-blue-500/50 rounded-full" />
       </div>
 

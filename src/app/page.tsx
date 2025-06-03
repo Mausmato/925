@@ -36,9 +36,6 @@ export default function Home() {
     <>
       <div className="space-y-12">
         <header className="relative flex flex-col items-center space-y-4 text-center">
-          <p className="max-w-2xl text-sm font-extrabold text-blue-400/80">
-            controls {"<>"} M (me), P (projects), and B (blog)
-          </p>
           <h1 className="text-6xl font-bold">
             <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
               Matthew Singer
@@ -68,7 +65,7 @@ export default function Home() {
               href={href}
               className="text-muted-foreground hover:text-foreground"
             >
-              <Icon className="h-6 w-6 text-blue-400" /> {/* Changed color to blue */}
+              <Icon className="h-6 w-6 text-blue-400" />
               <span className="sr-only">{label}</span>
             </a>
           ))}
